@@ -1,5 +1,4 @@
 # i-gang-med-github-natasja-andersen
-<<<<<<< HEAD
 ## Forklaring på hvordan man laver er repository
 
 Liste over hvordan du opretter et repository på Github ( Og console.log(); )
