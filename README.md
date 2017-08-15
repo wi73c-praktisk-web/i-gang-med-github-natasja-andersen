@@ -21,5 +21,6 @@ function boxAlert() {
 }
 console.log(alert);
 ```
+*Console.log(); er noget du bruger i forbindelse med testning og fejlretning. Det kan f.eks være at du gerne vil se om dine variabler virker som de burde*
 
 
