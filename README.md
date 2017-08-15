@@ -11,6 +11,8 @@
 
 ```javascript
 function fancyAlert() {
-   alert('Denne tekst vil komme frem i en alert boks))
+   alert('Denne tekst vil komme frem i en alert boks')
   }
 ```
+
+###Lavet af NatasjaAndersen fra MarieJensens computer (Da min computer lige pt er igennem en mega opdatering)
