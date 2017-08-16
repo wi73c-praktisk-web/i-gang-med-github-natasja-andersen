@@ -33,7 +33,10 @@ Foklaring af tegnene i en if else satement:
 Først skriver du betingelsen som er "if" efter det tilføjer du () og inden I dem skriver du selve betingelsen der skal opfyldes for at få koden til at køre. 
 * Så det nu vil se sådan her ud;
 ``` javascript
-if(navn == "Anders") nu skal der så tilføjes krølle parenteser {} og inden i dem skriver du f.eks hvad der skal ud til brugeren eller konsollen console.log("teksten her vil komme frem hvis betingelsen er opfyldt"); Derefter lukker du if betingelsen med et }
+if(navn == "Anders") nu skal der så tilføjes krølle parenteser {
+
+} og inden i dem skriver du f.eks hvad der skal ud til brugeren eller konsollen 
+console.log("teksten her vil komme frem hvis betingelsen er opfyldt"); Derefter lukker du if betingelsen med et }
 ``` 
 
 Herefter tilføjer du et else statement som vil blive kørt hvis if betingelsen IKKE er opfyldt, det vil sige hvis den er falsk, og det vil se sådan her ud:
