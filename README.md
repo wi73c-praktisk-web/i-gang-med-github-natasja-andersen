@@ -51,7 +51,7 @@ Den færdige version vil se sådan her ud:
 if(navn == "Anders"){
   console.log("Denne tekst vil komme frem hvis betingelsen er opfyldt");
 }else{
-  console.log("Navnet er ikke Anders);
+  console.log("Navnet er ikke Anders");
 }
 ``` 
 ----------------------------------------------------------------
