@@ -94,7 +94,7 @@ var tal = "5" if(tal ===5){}.
 
 * && De her ampersands betyder "og" det bruger du når du gerne vil have flere betingelser opfyldt før en kode bliver kørt. F.eks
 ``` javascript
- if(navn == "anders" && tal ==4){}
+ if(navn == "Anders" && tal ==4){}
  ```
 så skal begge betingelser være opfydlt før koden bliver kørt
 
@@ -107,7 +107,7 @@ så skal begge betingelser være opfydlt før koden bliver kørt
 En for løkke fungerer på den måde at man f.eks kan angive en variabel med et bestemt tal og så vil for løkken blive ved med at tælle enten op eller ned indtil den når til det første eller det sidste tal f.eks:
 ```javascript
 var tal = 2000;
-for(var tal = 200; tal > 1990; tal--){
+for(var tal = 2000; tal > 1990; tal--){
 console.log(tal);
 }
 ``` 
