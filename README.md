@@ -113,3 +113,25 @@ console.log(tal);
 ``` 
 I eksemplet foroven vil løkken blive ved med at køre indtil den når til tallet 1990, for så er betingelsen true, men når variablen ikke længere er større end 1990 vil det være false og løkken stoppes derfor.
 
+------------------------------------------------------------
+# Forklaring af funktioner
+*Nedenunder vil du kunne se en forklaring om funktioner*
+
+Du bruger en funktion til at bede Javascript om at gøre et bestemt event f.eks når du klikker på en knap og der så sker 'noget' så er det faktisk en funktion der går ind og sørger for at der sker den specifikke ting det kan f.eks være at når du trykker på knappen så kommer der mere tekst frem fra et 'skjult' afsnit på siden.
+
+Funktioner kan brugers til: 
+* At manipulere med HTML tags, f.eks tekst, knapper osv.
+* At lave specielle 'events' på en hjemmeside, f.eks et billedegalleri med pile der skifter billedet, email valideringer og dropdown menuer
+* Du kan også lave effekter, såsom snefald på et billede (Har selv prøvet det og det virker! \o/ )
+
+Et eksempel på en funktion:
+``` javascript
+var langTekst = "Hejsa, hvordan går det med dig i dag?";
+
+function afkort(tekst){
+   return tekst.substr(0, 19);
+}
+  console.log(afkort(langTekst));
+```
+*Funktionen foroven vil skære noget af teksten af, i dette tilfælde alt efter "går" vil ikke blive vist*
+
