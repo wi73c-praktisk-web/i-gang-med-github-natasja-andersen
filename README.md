@@ -149,7 +149,7 @@ Eksemplet foroven er en standard funktion uden noget fancy, men nogle gange er d
 ``` javascript 
 function getData(dataURI, callback) { 
   ``` 
-  * Derefter vil consol.log udskrive den tekst der nu er skrevet ind
+  * Derefter vil console.log udskrive den tekst der nu er skrevet ind
   ``` javascript
   console.log('første linje i getData funktionen...');
   ```
