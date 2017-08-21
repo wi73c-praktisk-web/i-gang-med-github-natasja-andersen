@@ -140,3 +140,61 @@ Eksemplet foroven er en standard funktion uden noget fancy, men nogle gange er d
 
 *~ mere kommer når jeg laver videre på det derhjemme.*
 
+
+------------------------------------------------------------
+# Asynkronitet
+
+*Forklaring af asynkronitet*
+* Først laver du funktionen, så laver du i dette tilfælde to arguements 
+``` javascript 
+function getData(dataURI, callback) { 
+  ``` 
+  * Derefter vil consol.log udskrive den tekst der nu er skrevet ind
+  ``` javascript
+  console.log('første linje i getData funktionen...');
+  ```
+
+  * Den næste linje er en timeout med en anonym funktion som vil fortælle javascript at det skal vente i de angivne sekunder
+  ``` javascript
+  var timer = setTimeout(function () {
+      console.log('Her der der gået 2 sekunder.');
+      var dataArray = [12, 34, 56, 78, 90, 123, 456, 789];
+      callback(dataArray);
+   }, 2000);
+}
+``` 
+I koden ovenover vil console.log aktivere efter der er gået to sekunder, det er defineret til ellersidst med "2000" da javascript bruger milisekunder så derfor vil "2000" være = to sekunder.
+
+``` javascript
+function outputData(myData) {
+   console.log('Dette er funktionen der udskriver det hentede data: ' + myData);
+}
+```
+Denne kode stump udskriver tallene fra arrayet som du kan se i boksen længere oppe.
+
+``` javascript
+getData('http://www.domain.com/something', outputData);
+console.log("Denne kode linje burde være den sidste.");
+```
+Som du kan se -burde- denne linje være den sidste, men den er faktisk nummer to i konsollen, og grunden til det er at i timeOut funktionen fortæller den at alt i kodeblokken skal vente med at 'execute' indtil der er gået to sekunder, så derfor hopper den videred til næste kodeblok med det samme.
+
+Den samlede kode ser sådan her ud:
+``` javascript
+function getData(dataURI, callback) {
+   console.log('første linje i getData funktionen...');
+   var timer = setTimeout(function () {
+      console.log('Her der der gået 2 sekunder.');
+      var dataArray = [12, 34, 56, 78, 90, 123, 456, 789];
+      callback(dataArray);
+   }, 2000);
+}
+
+function outputData(myData) {
+   console.log('Dette er funktionen der udskriver det hentede data: ' + myData);
+}
+
+getData('http://www.domain.com/something', outputData);
+console.log("Denne kode linje burde være den sidste.");
+```
+
+
