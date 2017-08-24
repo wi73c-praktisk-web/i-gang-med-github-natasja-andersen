@@ -196,5 +196,86 @@ function outputData(myData) {
 getData('http://www.domain.com/something', outputData);
 console.log("Denne kode linje burde være den sidste.");
 ```
+---------------------------------------------------------
+
+# Forklaring af promises
+*Nedenunder vil du kunne læse en forklaring med promises*
+
+Promises kan du bruge når du gerne vil have javascript til at sende et argument fra en funktion til en anden funktion. Nedenunder kan du se et eksempel hvor promise er brugt (Det fungerer i øvrigt stortset ligesom "callbacks") 
+
+``` javascript
+  var firstPromise = new Promise(function (resolve, reject) {
+     // her kunne der være masser af kode der skulle udføres
+     // og derefter afsluttes med at resolve eller reject
+     // alt efter om alting lykkedes eller ej
+     if (true) {
+        resolve('success');
+     } else {
+        reject('Det var ikke en succes');
+     }
+  });
+ 
+  firstPromise.then(function(successMessage) {
+     console.log(successMessage);
+  }).catch(function(errorMessage) {
+     console.log(errorMessage);
+  });
+```
+
+-------------------------------------------------------------
+# Forklaring af node-server basic
+*Nedenudner kan du læse ne forklaring omkring node-server basic*
+
+Med node-server kan du via node.js og javascript forbinde til en server, og dermed gøre din kodning til serverside kodning. Nedenunder kan du se et eksempel på hvordan man opretter forbindelse til en localhost (lokal server på computeren) ved hjælp at node.js og javascript:
+``` javascript
+const http = require('http');
+const hostname = '127.0.0.1';
+const port = 3001;
+
+const router = require('./controllers/routesController');
+
+http.createServer(function (req, res) {
+    router.init(req, res);
+}).listen(port, hostname);
+
+console.log(`serveren kører på http://${hostname}:${port}/`);
+``` 
+Foroven starter du med at lave en const (En variabel der ikke ændrer værdi) hvor du sætter et modul ind, i dette tilfælde et indygget modul med 'http'
+Derefter skal du have fat i navnet på den lokal server som altid vil være '127.0.0.1' (Eller'localhost80')
+Der skal også angives en port, og i dette tilfælde har jeg valgt 3001 (Det er for at identificere hvor serveren befinder sig)
+
+I dette eksempel bruger jeg også en 'route' som kan sende os videre til andre sider på serveren.
+
+Dernæst skal funktionen som forbinder til serveren oprettes. Den fortæller at router skal forbinde til serveren via porten og addressen på serveren.
+
+Derefter går jeg hen til routefilen som jeg bare har kaldt routeController, nedenunder kan du se hvordan det ser ud:
+``` javascript
+const url = require('url');
+
+module.exports = {
+	init: function (req, res) {
+		var pathname = url.parse(req.url, true).pathname;
+		if (pathname === '/forside') {
+			res.statusCode = 200;
+			res.setHeader('Content-Type', 'text/html');
+			res.write(`<h1>Her vil der være en hjemmeside heading</h1>
+      <p>OG her vil der være en masse tekst</p>`);
+			res.end();
+		} else {
+			res.statusCode = 404;
+			res.end("<h1>Fejl! Tjek venligst koden!</h1>");
+		}
+	}
+};
+``` 
+Der oprettes en variabel med 'url' som jeg vil bruge lidt længere nede. Derefter eksporterer vi vores http modul. "Var pathname = url.parse..." Tjekker navnet i url baren i browseren, derefter lave vi en betingelser hvor vi siger at hvis addressen i url baren er /forside så vil vi gerne have at den tjekker at der er forbindelse til siden det gør vi med "res.statusCode = 200" Vi siger 200 fordi det er statuskoden for en side der fungerer. Vi bruger ordet "res" foran fordi vi har givet vores argument det navn i funktionen. 
+
+I "res.setHeader..." Definerer vi hvlken type indhold vi gerne vil have ind på siden, i dette tilfælde html.
+Nedenunder i "res.write..." Skriver vi indholdet det er her vi sætter alt vores html ind så vi kan få en rigtig fin side.
+I "res.end();" fortælelr vi at kodeblokken skal afsluttes.
+
+I "else" betingelsen fortæller vi hvordan browseren skal reagere hvis der opstår en fejl! Det er derfor vi skriver "res.statusCode = 404" da dette nummer betyder fejl.
+Derefter har vi endnu en "res.end()" hvor vi fortæller kodeblokken skal stoppe her har jeg bare tilføjet en tekst som vil komme frem i browseren.
+
 
 
