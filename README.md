@@ -246,6 +246,53 @@ Promises kan du bruge når du gerne vil have javascript til at sende et argument
 ```
 
 -------------------------------------------------------------
+# Forklaring af fetch.then.catch
+*Nedenunder kan du læse mere om feth.then.catch*
+
+Fetching er noget du bruger til at integrere et promise som så kan foretage et asynkront kald til en url/API. Derefter vil du bruge "then" til at indsamle den data du får retur fra URL/API addressen. Men hvis der er en fejl f.eks at URL/API addressen er nede eller ikke længere eksisterere så vil den ryge ned til "catch"
+
+-Men! For at vi kan -se- indholdet er vi nødt til at "konvertere" det, dette gør vi ved hjælp af JSON (I hvert fald indtil videre på hovedforløbet) dette gøres ved at skrive "return response.json();" hvor vi beder om (requester) at API'en sender dataen tilbage til os i JSON. 
+JSON vil via console.log() fortælle os hvad dette API indeholder og ved hjælp af det kan vi som udviklere bruge den information til at udskrive det i browseren som et array.
+
+Et eksempel hvor man kan bruge det:
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="liste">
+    </div>
+<script>
+
+  fetch('https://swapi.co/api/people/') //API'en vi vil have data fra
+  .then((response) => {
+      if(response.status == 200){//Betingelse der fortæller hvad der skal ske hvis siden fungerer via status 200 (Betyder at internetsiden fungerer)
+        return response.json();
+      } 
+      throw new Error('Fejl'); //Fortæller hvad der skal ske hvis status koden er alt andet end 200
+  })
+  .then((json) => {
+var liste = document.getElementById('liste');//Her fortæller vi at vi gerne vil have fat i noget HTML.
+json.results.forEach(function(item, index, arr){//Her løber vi iennem resultaterne fra arrayet JSON har givet os
+      console.log(json.results[index].name);//Her beder vi konsollen om at udskrive -alle- navnene der er i arrayet
+      liste.innerHTML += '<p>' + json.results[index].name + '</p>'; //Her gør vi det samme som i konsollen, men denne linje fortæller at vi gerne vil have det skrevet ud i browseren
+   item[index];
+}) 
+
+  })  //Catch, hernede fortæller vi hvad vi gerne vil have koden til at udføre hvis der opstår en fejl, i dette ilfælde vil der bare komme en besked frem i konsollen med teksten "Fejl"
+  .catch((error) => {
+    console.log(error);
+});
+</script>
+``` 
+I eksemplet ovenover har jeg brugt html så jeg kan udskrive det i browseren.
+
+-------------------------------------------------------------
 # Forklaring af node-server basic
 *Nedenudner kan du læse ne forklaring omkring node-server basic*
 
