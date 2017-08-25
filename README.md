@@ -284,7 +284,7 @@ json.results.forEach(function(item, index, arr){//Her løber vi igennem resultat
    item[index];
 }) 
 
-  })  //Catch, hernede fortæller vi hvad vi gerne vil have koden til at udføre hvis der opstår en fejl, i dette ilfælde vil der bare komme en besked frem i konsollen med teksten "Fejl"
+  })  //Catch, hernede fortæller vi hvad vi gerne vil have koden til at udføre hvis der opstår en fejl, i dette tilfælde vil der bare komme en besked frem i konsollen med teksten "Fejl"
   .catch((error) => {
     console.log(error);
 });
