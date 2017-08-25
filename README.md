@@ -273,7 +273,7 @@ Et eksempel hvor man kan bruge det:
   .then((response) => {
       if(response.status == 200){//Betingelse der fortæller hvad der skal ske hvis siden fungerer via status 200 (Betyder at internetsiden fungerer)
         return response.json();
-      } 
+      }else
       throw new Error('Fejl'); //Fortæller hvad der skal ske hvis status koden er alt andet end 200
   })
   .then((json) => {
