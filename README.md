@@ -311,7 +311,7 @@ http.createServer(function (req, res) {
 console.log(`serveren kører på http://${hostname}:${port}/`);
 ``` 
 Foroven starter du med at lave en const (En variabel der ikke ændrer værdi) hvor du sætter et modul ind, i dette tilfælde et indygget modul med 'http'
-Derefter skal du have fat i navnet på den lokal server som altid vil være '127.0.0.1' (Eller'localhost80')
+Derefter skal du have fat i navnet på den lokale server som altid vil være '127.0.0.1' (Eller'localhost80')
 Der skal også angives en port, og i dette tilfælde har jeg valgt 3001 (Det er for at identificere hvor serveren befinder sig)
 
 I dette eksempel bruger jeg også en 'route' som kan sende os videre til andre sider på serveren.
