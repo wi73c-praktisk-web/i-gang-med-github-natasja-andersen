@@ -54,7 +54,7 @@ if(navn == "Anders"){
   console.log("Navnet er ikke Anders");
 }
 ``` 
-*Uploadet fra Maries computer da min egen havde en kæmpe opdatering på det tidspunkt (Computere har bare dårlig timing nogle gange...)
+*Uploadet fra Maries computer da min egen havde en kæmpe opdatering på det tidspunkt (Computere har bare dårlig timing nogle gange...)*
 ----------------------------------------------------------------
 # Beskrivelse af operatorer
 *Forneden vil du kunne læse en lille forklaring om hvornår man bruger hver enkelt operator:*
