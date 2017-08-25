@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    
+    <body>
+
+<script>
+
+// Øvelse 1 - Omskriv et forEach kal så det ikke benytter en anonym funktion
+
+var data = [1, 2, 3, 4, 5, 6];
+data.forEach(function (element) {
+   console.log(element);
+});
+    
+    //........ Funktion handling sidder i data, men det er handling der bliver udført
+    var data = function handling(){
+   // noget kode...
+};
+data(); // dette udfører "handling()"
+    
+    //........
+    
+    // tænk på dette som den primære funktion der kaldes fra vores kode
+function doSomething(someValue, callback){ //når doSomething er færdig med at gøre det den skal vil vi gerne have den til at gøre noget andet og derfor bruger vi "callback" efter,
+   callback(someValue); //Kald funktionen "callback" det her sker efter den første handling
+}
+// denne funktion vil blive udført som en callback FRA doSomething funktionen, den første funktion gør noget og så bliver denne her funktion tilføjet efterfølgende
+function outputSomething(value){
+   console.log(value);
+}
+    
+    doSomething('text', outputSomething);
+
+
+</script>
+    </body>  
+</html>

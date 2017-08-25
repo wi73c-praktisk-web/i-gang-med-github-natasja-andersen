@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="liste">
+    </div>
+
+
+<script>
+  fetch('https://swapi.co/api/people/')
+  .then((response) => {
+      if(response.status == 200){
+        return response.json();
+      } 
+      throw new Error('Fejl');
+  })
+  .then((json) => {
+var liste = document.getElementById('liste');
+json.results.forEach(function(item, index, arr){
+      console.log(json.results[index].name);
+      liste.innerHTML += '<p>' + json.results[index].name + '</p>';
+   item[index];
+}) 
+
+  })  
+  .catch((error) => {
+    console.log(error);
+});
+
+
+
+
+</script>
+
+</body>
+</html>

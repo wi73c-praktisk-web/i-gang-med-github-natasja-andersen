@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+    </head>
+    
+    <body>
+<p id="udskrift"></p>
+
+<script>
+
+    //CALLBACK ØVELSER:
+
+var udskrift_html = document.getElementById("udskrift");
+function virk(argument1, callback){  
+argument1 += ' Ehh '
+   callback(argument1); 
+}
+    
+function virkfunktion2(value){
+//    console.log('h1' + value + '</h1');
+   console.log(value);
+    udskrift_html.innerHTML += "<p>" + value + "</p>";
+}   
+    virk('Det her er:', virkfunktion2); // Denne her bliver kaldt og sender tekst op i someValue, og outputSomething kommer op i "callback"
+    
+
+
+
+
+
+</script>
+    </body>
+</html>
