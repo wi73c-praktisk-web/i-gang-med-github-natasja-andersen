@@ -32,7 +32,7 @@ console.log(resultat);
 
 //Øvelse 4: Opret en variabel med navnet på din favorit drik. Opret en if - else if - else struktur hvor der skal udskrives tekst, lav mindst to else if blokke
 
-var drik = "sprite";
+var drik = "cola";
 if(drik == "cola"){
     console.log("Dette er den rigtige drik!");
 }else if (drik == "sprite"){
