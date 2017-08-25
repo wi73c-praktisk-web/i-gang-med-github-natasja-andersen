@@ -278,7 +278,7 @@ Et eksempel hvor man kan bruge det:
   })
   .then((json) => {
 var liste = document.getElementById('liste');//Her fortæller vi at vi gerne vil have fat i noget HTML.
-json.results.forEach(function(item, index, arr){//Her løber vi iennem resultaterne fra arrayet JSON har givet os
+json.results.forEach(function(item, index, arr){//Her løber vi igennem resultaterne fra arrayet JSON har givet os
       console.log(json.results[index].name);//Her beder vi konsollen om at udskrive -alle- navnene der er i arrayet
       liste.innerHTML += '<p>' + json.results[index].name + '</p>'; //Her gør vi det samme som i konsollen, men denne linje fortæller at vi gerne vil have det skrevet ud i browseren
    item[index];
