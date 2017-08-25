@@ -136,6 +136,8 @@ function afkort(tekst){
   console.log(afkort(langTekst));
 ```
 *Funktionen foroven vil skære noget af teksten af, i dette tilfælde alt efter "går" vil ikke blive vist*
+I eksemplet definerer man funktionen ved at give den et navn i dette tilfælde "afkort" derefter skal den have sine parenteser, i eksemplet har jeg givet den et argument som bliver brugt nede i return som er inde i selve funktionen. Du starter en funktion med { og slutter funktionen med et}. "substr" som fortæller at vi gerne ved skære noget af en tekst af i () skal man først definere hvor man starter, her har jeg sagt fra tegn 0 og derefter fortæller jeg hvor mange tegn jeg vil have med. Alt efter 19 tegn bliver fjernet.
+Udenfor funktionen har jeg lavet en console.log hvor jeg har sagt at jeg gerne vil have funktionen og min variabel med, så når jeg udskriver til min konsol vil den vise de første 19 tegn fra teksten i "var langTekst"
 
 ------------------------------------------------------------
 # Asynkronitet
