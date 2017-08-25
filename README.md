@@ -137,12 +137,6 @@ function afkort(tekst){
 ```
 *Funktionen foroven vil skære noget af teksten af, i dette tilfælde alt efter "går" vil ikke blive vist*
 
-#### Mere om funktioner
-Eksemplet foroven er en standard funktion uden noget fancy, men nogle gange er det praktisk at lave en funktion i en funktion
-
-*~ mere kommer når jeg laver videre på det derhjemme.*
-
-
 ------------------------------------------------------------
 # Asynkronitet
 
