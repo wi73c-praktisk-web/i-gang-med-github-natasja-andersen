@@ -197,6 +197,26 @@ getData('http://www.domain.com/something', outputData);
 console.log("Denne kode linje burde være den sidste.");
 ```
 ---------------------------------------------------------
+# Forklaring af callbacks
+*Nedenunder vil du kunne læse en forklaring med callbacks*
+
+Du bruger callbacks til at sende funktioner med arguments til en anden funktion i koden.
+
+Et eksempel hvor man bruger callbacks: 
+``` javascript
+ // tænk på dette som den primære funktion der kaldes fra vores kode
+function doSomething(someValue, callback){ //når doSomething er færdig med at gøre det den skal vil vi gerne have den til at gøre noget andet og derfor bruger vi "callback" efter,
+   callback(someValue); //Kald funktionen "callback" det her sker efter den første handling
+}
+// denne funktion vil blive udført som en callback FRA doSomething funktionen, den første funktion gør noget og så bliver denne her funktion tilføjet efterfølgende
+function outputSomething(value){
+   console.log(value);
+}
+    
+    doSomething('text', outputSomething); //'text' er det der vil blive udskrevet i konsollen, så hvis du ændrer det til "Hello world" så vil det være "Hello world" der vil komme frem i konsollen
+```
+
+---------------------------------------------------------
 
 # Forklaring af promises
 *Nedenunder vil du kunne læse en forklaring med promises*
