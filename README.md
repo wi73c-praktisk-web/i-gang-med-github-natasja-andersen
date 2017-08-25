@@ -215,6 +215,7 @@ function outputSomething(value){
     
     doSomething('text', outputSomething); //'text' er det der vil blive udskrevet i konsollen, så hvis du ændrer det til "Hello world" så vil det være "Hello world" der vil komme frem i konsollen
 ```
+*Man kan i stedet bruge promises - mere om det nedenunder*
 
 ---------------------------------------------------------
 
