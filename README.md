@@ -294,7 +294,7 @@ I eksemplet ovenover har jeg brugt html så jeg kan udskrive det i browseren.
 
 -------------------------------------------------------------
 # Forklaring af node-server basic
-*Nedenudner kan du læse ne forklaring omkring node-server basic*
+*Nedenunder kan du læse ne forklaring omkring node-server basic*
 
 Med node-server kan du via node.js og javascript forbinde til en server, og dermed gøre din kodning til serverside kodning. Nedenunder kan du se et eksempel på hvordan man opretter forbindelse til en localhost (lokal server på computeren) ved hjælp at node.js og javascript:
 ``` javascript
@@ -338,14 +338,14 @@ module.exports = {
 	}
 };
 ``` 
-Der oprettes en variabel med 'url' som jeg vil bruge lidt længere nede. Derefter eksporterer vi vores http modul. "Var pathname = url.parse..." Tjekker navnet i url baren i browseren, derefter lave vi en betingelser hvor vi siger at hvis addressen i url baren er /forside så vil vi gerne have at den tjekker at der er forbindelse til siden det gør vi med "res.statusCode = 200" Vi siger 200 fordi det er statuskoden for en side der fungerer. Vi bruger ordet "res" foran fordi vi har givet vores argument det navn i funktionen. 
+Der oprettes en variabel med 'url' som jeg vil bruge lidt længere nede. Derefter eksporterer vi vores http modul. "Var pathname = url.parse..." Tjekker navnet i url baren i browseren, derefter laver vi en betingelser hvor vi siger at hvis addressen i url baren er /forside så vil vi gerne have at den tjekker at der er forbindelse til siden det gør vi med "res.statusCode = 200" Vi siger 200 fordi det er statuskoden for en side der fungerer. Vi bruger ordet "res" foran fordi vi har givet vores argument det navn i funktionen. (Det kunne ligesågodt være "request" "svar" osv, det er 'bare' et navn)
 
 I "res.setHeader..." Definerer vi hvlken type indhold vi gerne vil have ind på siden, i dette tilfælde html.
 Nedenunder i "res.write..." Skriver vi indholdet det er her vi sætter alt vores html ind så vi kan få en rigtig fin side.
-I "res.end();" fortælelr vi at kodeblokken skal afsluttes.
+I "res.end();" fortæller vi at kodeblokken skal afsluttes.
 
 I "else" betingelsen fortæller vi hvordan browseren skal reagere hvis der opstår en fejl! Det er derfor vi skriver "res.statusCode = 404" da dette nummer betyder fejl.
-Derefter har vi endnu en "res.end()" hvor vi fortæller kodeblokken skal stoppe her har jeg bare tilføjet en tekst som vil komme frem i browseren.
+Derefter har vi endnu en "res.end()" hvor vi fortæller kodeblokken skal stoppe her har jeg bare tilføjet en tekst som vil komme frem som en h1 i browseren.
 
 
 
