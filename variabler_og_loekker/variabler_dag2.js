@@ -3,7 +3,7 @@
 //Øvelse 1
 var navn = "Natasja Andersen";
 var alder = 22;
-var tekst = `Mit navn er ${navn} og jeg er ${alder} gammel`;
+var tekst = `Mit navn er ${navn} og jeg er ${alder} år`;
 
 console.log(tekst);
 
